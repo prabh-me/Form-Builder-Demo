@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Form Builder</title>
+	
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="formBuilder.css" rel="stylesheet">
+	<style>
+		body {
+		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+		}
+	</style>
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+	
+	</head>
+
+	<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav">
+				<li class="active"><a href="javascript:history.back()">Go back to Home</a></li>
+				
+			</ul>
+			<h2><center>Form Builder</center></h2>
+			
+		</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span4">
+				<ul class="nav nav-tabs" id="formTabs">
+					<li class="active"><a class="fields" href="#fields">Add Fields</a></li>
+					<li><a class="fieldProps" href="#fieldProps">Modify</a></li>
+					<li><a class="prop" href="#formProps">Form Properties</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="fields">
+						
+						<h6>Form Elements</h6>
+						<table class="items">
+							<tr>
+								<td><div class="btn" data-type="textField"><i class="icon-pencil"></i> Text Field</div></td>
+								<td><div class="btn" data-type="textarea"><i class="icon-align-left"></i> Text Area</div></td>
+							</tr>
+							
+							<tr>
+								<td><div class="btn" data-type="checkBox"><i class="icon-ok"></i> Check Box</div></td>
+								<td><div class="btn" data-type="seperator"><i class="icon-info-sign"></i> Line</div></td>
+							</tr>
+							<tr>
+								<td><div class="btn" data-type="blank"><i class="icon-font"></i> Text</div></td>
+								<td></td>
+							</tr>
+						</table>
+						<hr>
+						<h6>Custom Elements</h6>
+						<table class="items">
+							<tr>
+								<td><div class="btn" data-type="name"><i class="icon-user"></i> Name</div></td>
+								<td><div class="btn" data-type="email"><i class="icon-envelope"></i> Contact Number</div></td>
+							</tr>
+							
+							<tr>
+								<td><div class="btn" data-type="date"><i class="icon-calendar"></i> Date of Birth</div></td>
+								<td><div class="btn" data-type="address"><i class="icon-home"></i> Address</div></td>
+							</tr>
+							
+						</table><hr>
+					</div>
+					
+					<div class="tab-pane" id="fieldProps">
+
+					</div>
+					
+					<div class="tab-pane" id="formProps">
+						<label for="formName">Form Name</label>
+						<input type="text" name="formName" value="Doctor's Form">
+						<label for="formDesc">Form Description</label>
+						<input type="text" name="formDesc" value="Describe">
+					</div>
+
+				</div>
+			</div>
+			<div class="span8 hero-unit">
+				<div class="formHeader">
+					<h2 class="title">Doctor's Form</h2>
+					<p class="desc"></p>
+				</div>
+				<div class="formBody">
+				</div>
+			</div>
+		</div>
+		<div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button class="btn">Add concept</button>
+			<button class="btn">Push</button>
+          </div>
+	</div> 
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	<script src="jquery-ui-1.8.20.custom.min.js"></script>
+	<script src="assets/js/bootstrap-transition.js"></script>
+	<script src="assets/js/bootstrap-alert.js"></script>
+	<script src="assets/js/bootstrap-modal.js"></script>
+	<script src="assets/js/bootstrap-dropdown.js"></script>
+	<script src="assets/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/js/bootstrap-tab.js"></script>
+	<script src="assets/js/bootstrap-tooltip.js"></script>
+	<script src="assets/js/bootstrap-popover.js"></script>
+	<script src="assets/js/bootstrap-button.js"></script>
+	<script src="assets/js/bootstrap-collapse.js"></script>
+	<script src="assets/js/bootstrap-carousel.js"></script>
+	<script src="assets/js/bootstrap-typeahead.js"></script>
+	<script src="assets/js/bootstrap-tab.js"></script>
+	<script src="formBuilder.js"></script>
+
+
+	</body>
+</html>

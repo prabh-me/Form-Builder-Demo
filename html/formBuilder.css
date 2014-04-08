@@ -1,0 +1,72 @@
+table.items{
+	width:100%;
+}
+table.items td {
+	padding:5px 10px;
+}
+table .btn{
+	width:90%
+}
+label{
+	font-weight:bold;
+}
+
+.formHeader{
+	padding:10px;
+	border:1px solid transparent;
+	position:relative;
+}
+.formHeader:hover{
+	border:1px solid #ccc;
+	background:#D0D0D0;
+}
+.formHeader.active{
+	border:1px solid #ccc;
+	background:#D0D0D0;
+}
+.formItem{
+	padding:10px;
+	border:1px solid transparent;
+	position:relative;
+}
+.formItem:hover{
+	border:1px solid #ccc;
+	background:#D0D0D0;
+}
+.formItem.active{
+	border:1px solid #ccc;
+	background:#D0D0D0;
+}
+.formItem .delete{
+	position:absolute;
+	top:-8px;
+	left:-8px;
+	display:none;
+}
+.formItem:hover .delete{display:block}
+.break{font-weight:bold;font-size:16px;}
+.break hr{
+	border-color: #666 -moz-use-text-color #666;
+	margin:5px 0 15px;
+}
+
+
+.formItem span {display:inline-block;margin:0 5px;}
+.formItem span input{display: block;margin:0;}
+.formItem span small{display: block;font-size:10px;margin:0 0 0 5px;letter-spacing: 1px;}
+.formItem input.input-smaller{width:20px}
+.formItem input.input-smaller.year{width:40px}
+.formItem.address span{display:block;margin:0 0 10px}
+textarea.blank {resize:none;height:150px;width:360px;}
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]{
+	background-color: inherit;
+	border-color: inherit;
+}
+.formItem ul{margin:0;padding:0;list-style-type:none;}
+.formItem li input{margin:0 10px 0 0;}
+.formBody{margin:0;padding:0;list-style-type:none;}
+.formBody .alert{
+	height:100px;
+	background:white;
+	border:2px dashed rgba(0,0,0,0.5);
+}
