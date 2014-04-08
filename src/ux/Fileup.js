@@ -1,107 +1,3 @@
-/**
- * @filename Fileup.js
- * 
- * @name File uploading component
- * @fileOverview File uploading component based on Ext.Button
- *
- * @author Constantine V. Smirnov kostysh(at)gmail.com
- * @date 20130203
- * @version 2.0
- * @license GNU GPL v3.0
- *
- * @requires Sencha Touch 2.1.1
- * 
- * This component can works in two modes (switched by loadAsDataUrl config):
- * 1) Load local files as dataUrl. 
- * Will be useful if you want to load a local file. For example you can load
- * image and display it inside dom or store it into localStorage.
- * 2) Upload files to server (you should also setup a server part)
- * Current PHP version of server part located in src/php folder (getfile.php)
- * 
- * Server response format (JSON):
- * {
- *     success: true,// or false
- *     message: ''// error message if success === false
- * }
- * 
- * Component has three states:
- * 1) Browse: Initial state, you can browse and select file
- * 2) Ready: File selected and ready for load or upload
- * 3) Uploading: File loading or uploading in process
- * 
- * You can configure these states (add custom text and styles).
- * Default configuration below:
- * 
- 
-
-items: [
-
-    //Fileup configuration for "Load local file" mode
-    {
-        xtype: 'fileupload',
-        autoUpload: true,
-        loadAsDataUrl: true,
-        states: {
-            browse: {
-                text: 'Browse and load'
-            },
-            ready: {
-                text: 'Load'
-            },
-
-            uploading: {
-                text: 'Loading',
-                loading: true// Enable loading spinner on button
-            }
-        }
-    },
-    
-    //Fileup configuration for "Upload file" mode
-    {
-        itemId: 'fileBtn',
-        xtype: 'fileupload',
-        autoUpload: false,
-        url: 'src/php/getfile.php'
-    }
-]
-
- 
- * 
- */
-
-/**
- * @event success
- * Fired when file uploaded successfully
- * @param {Object} response Response object obtained from server
- * @param {Object} xhr Link to XMLHttpRequest object
- * @param {Object} e Success event
- */
-
-/**
- * @event failure
- * Fired when file not uploaded or server just returns error message
- * @param {String} message Parsed error message obtained from server
- * @param {Object} response Response object obtained from server
- * @param {Object} xhr Link to XMLHttpRequest object
- * @param {Object} e Uploading error event
- */
-
-/**
- * @event loadsuccess
- * Fired when file uploaded successfully
- * @param {Object} dataUrl DataUrl source of readed file
- * @param {Object} reader Link to FileReader object
- * @param {Object} e Load event
- */
-
-/**
- * @event loadfailure
- * Fired when file not uploaded or server just returns error message
- * @param {String} message Parsed error message obtained from server
- * @param {Object} reader Link to FileReader object
- * @param {Object} e Loading error event
- */
-
 Ext.define('Ext.ux.Fileup', {
     extend: 'Ext.Button',
     xtype: 'fileupload',
@@ -113,7 +9,7 @@ Ext.define('Ext.ux.Fileup', {
     
     template: [
         
-        // Default button elements (do not change!)
+        // Default button elements
         {
             tag: 'span',
             reference: 'badgeElement',
@@ -372,14 +268,6 @@ Ext.define('Ext.ux.Fileup', {
         }
     },
     
-    /**
-     * @private
-     * @method doLoad
-     * Read selected file as dataUrl value.
-     * If you wish to get dataUrl content 
-     * then you should listen for "loadsuccess" event
-     * @param {Object} file Link to loaded file element
-     */
     doLoad: function(file) {
         var me = this;                
         var reader = new FileReader();
